@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="560" viewBox="0 0 760 560" aria-hidden="true">
+  <!-- Sparse, lightly drawn scales: not an all-over tile pattern. -->
+  <g fill="none" stroke="#916771" stroke-width="1.8" stroke-opacity="0.10" stroke-linecap="round">
+    <path d="M63 83 Q84 115 105 83 M111 83 Q132 115 153 83 M87 118 Q108 150 129 118"/>
+    <path d="M556 403 Q577 435 598 403 M604 403 Q625 435 646 403 M580 438 Q601 470 622 438"/>
+  </g>
+</svg>

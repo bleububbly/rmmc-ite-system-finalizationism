@@ -1,0 +1,176 @@
+/* RMMC ITE — refined crimson login (v2)
+   Restores the ORIGINAL welcome/branding panel on the left.
+   Redesigns ONLY the sign-in side on the right.
+   Authentication code, labels, form names and links remain unchanged.
+*/
+body.login-page {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  align-items: stretch !important;
+  justify-content: initial !important;
+  background: #fcf5f7 !important;
+  min-height: 100dvh;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative;
+  isolation: isolate;
+  overflow-x: hidden;
+  color: #202638;
+}
+/* Remove the previous full-screen-theme watermark, NOT the left-side watermark
+   which belongs to login-ite.css and is preserved. */
+body.login-page::before, body.login-page::after { display: none !important; }
+
+/* LEFT: original sidebar/board layout and all its text/logo/chips */
+.login-page .login-left {
+  box-sizing: border-box;
+  display: flex !important;
+  flex-direction: column !important;
+  width: auto !important;
+  min-width: 0;
+  min-height: 100dvh !important;
+  margin: 0 !important;
+  padding: 40px clamp(28px, 4.4vw, 64px) !important;
+  border: 0 !important;
+  color: #fff;
+  position: relative;
+  overflow: hidden !important;
+  box-shadow: none !important;
+  /* Keep the original panel gradient supplied by login-ite.css. */
+  background: linear-gradient(140deg,rgba(130,13,33,.93),rgba(185,22,46,.77) 55%,rgba(255,255,255,.13)) !important;
+}
+.login-page .login-left::before { display: block !important; }
+.login-page .login-left::after { display: block !important; }
+.login-page .ite-login-logo-top {
+  display: block !important;
+  width: 69px;
+  height: 69px;
+  margin: 0;
+  padding: 4px;
+  border: 0;
+  border-radius: 50%;
+  object-fit: contain;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(52,2,14,.24);
+}
+.login-page .login-intro {
+  display: block !important;
+  position: relative;
+  z-index: 1;
+  margin: auto 0 !important;
+}
+.login-page .login-intro .eyebrow { color: #ffe5e7; opacity: .9; }
+.login-page .login-intro h1 { color: #fff; }
+.login-page .login-intro > p { color: #ffeaed; }
+.login-page .login-chips { display: flex !important; }
+.login-page .login-copy { display: block !important; }
+
+/* RIGHT: modern dark red, legible sign-in form, no changes to PHP form. */
+.login-page .login-right {
+  box-sizing: border-box;
+  display: grid !important;
+  place-items: center;
+  min-width: 0;
+  width: auto !important;
+  min-height: 100dvh !important;
+  padding: clamp(28px, 5vw, 64px) clamp(22px, 5vw, 70px) !important;
+  margin: 0 !important;
+  background:
+    radial-gradient(circle at 105% -10%, rgba(248,93,118,.20), transparent 48%),
+    radial-gradient(circle at -12% 115%, rgba(207,51,82,.24), transparent 55%),
+    linear-gradient(155deg, #4b0718 0%, #6e1329 49%, #390613 100%) !important;
+  box-shadow: inset 1px 0 0 rgba(255,255,255,.10);
+  color: #fff;
+  border: 0 !important;
+}
+.login-page .login-panel {
+  box-sizing: border-box;
+  width: min(100%, 462px);
+  max-width: 462px;
+  margin: 0 auto !important;
+  padding: clamp(26px,3.5vw,40px) !important;
+  background: linear-gradient(150deg,#67162a,#490c1c) !important;
+  border: 1px solid rgba(255,210,224,.19) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 22px 58px rgba(22,0,8,.28), inset 0 1px 0 rgba(255,255,255,.08) !important;
+  color: #fff !important;
+}
+.login-page .ite-login-logo-card {
+  display: block !important;
+  height: 64px;
+  width: 64px;
+  margin: 0 0 22px;
+  padding: 3px;
+  background: #fff;
+  border-radius: 50%;
+  object-fit: contain;
+}
+.login-page .login-panel > h2 { display: block !important; font-size: clamp(26px,3vw,33px); line-height: 1.16; font-weight: 800; margin: 0 0 7px; color: #fff; }
+.login-page .login-panel > p:first-of-type { display: block !important; margin: 0 0 24px; font-size: 13px; color: #f0c4cf; }
+.login-page .form-stack { gap: 18px; }
+.login-page .form-stack label { display: block; position: relative; font-size: 13px; font-weight: 700; color: #ffe4ea; }
+.login-page .form-stack input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  min-height: 57px;
+  margin-top: 8px;
+  padding: 12px 16px;
+  border: 1px solid rgba(255,225,235,.23);
+  border-radius: 13px;
+  background: #2b0613 !important;
+  color: #fff !important;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.12);
+  font-size: 15px;
+  font-weight: 500;
+  transition: border-color .16s, box-shadow .16s;
+}
+.login-page .form-stack input::placeholder { color: #c6a7b0; opacity: 1; }
+.login-page .form-stack input:focus { outline: 0; border-color: #ffc0cf; box-shadow: 0 0 0 3px rgba(255,179,199,.18); }
+.login-page .form-stack input[name="password"] { padding-right: 72px; }
+.login-page .login-password-toggle {
+  position: absolute;
+  right: 8px;
+  bottom: 9px;
+  min-width: 54px;
+  height: 39px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: #ffe4eb;
+  font-weight: 800;
+  font-size: 12px;
+}
+.login-page .login-password-toggle:hover, .login-page .login-password-toggle:focus-visible { background: rgba(255,255,255,.12); }
+.login-page .form-stack .btn-primary {
+  min-height: 58px;
+  margin-top: 6px;
+  background: linear-gradient(160deg,#e5455d 0%,#c82641 56%,#991b32 100%) !important;
+  border: 1px solid rgba(255,220,228,.22);
+  border-radius: 13px;
+  color: #fff !important;
+  box-shadow: 0 8px 18px rgba(15,0,6,.24), inset 0 1px rgba(255,255,255,.19);
+  font-weight: 800;
+  font-size: 15px;
+}
+.login-page .form-stack .btn-primary:hover { filter: brightness(1.07); }
+.login-page .form-stack .btn-primary:focus-visible { outline: 3px solid #ffdbe5; outline-offset: 3px; }
+.login-page .login-panel .help { text-align: left; color: #f0cbd5; font-size: 12px; line-height: 1.6; margin: 18px 0 10px; }
+.login-page .ite-forgot-box { margin: 17px 0 0; padding: 15px 0 0; border-top: 1px solid rgba(255,255,255,.18); }
+.login-page .ite-forgot-box summary { color: #fff; font-size: 13px; font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+.login-page .ite-forgot-box p { color: #ffe1e8 !important; font-size: 12px !important; line-height: 1.6; margin: 10px 0 !important; }
+.login-page .alert-error { color: #741426; background: #fff0f2; border-color: #eab4bf; }
+
+@media (max-width: 790px) {
+  body.login-page { grid-template-columns: minmax(0,1fr) !important; }
+  .login-page .login-left { min-height: 286px !important; padding: 24px 26px !important; }
+  .login-page .login-left .login-intro { margin: 22px 0 !important; }
+  .login-page .login-left .login-intro h1 { font-size: clamp(28px,6vw,39px); margin: 10px 0; }
+  .login-page .login-left .login-intro > p { font-size: 12px; }
+  .login-page .login-left .login-chips { margin-top: 12px; }
+  .login-page .login-left .login-chips span { font-size: 10px; padding: 4px 9px; }
+  .login-page .login-copy { display: none !important; }
+  .login-page .login-right { min-height: auto !important; padding: 25px 18px 40px !important; }
+  .login-page .login-panel { padding: 27px 23px !important; }
+}
+@media (prefers-reduced-motion: reduce) { .login-page .form-stack input { transition: none; } }

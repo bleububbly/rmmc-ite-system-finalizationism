@@ -1,0 +1,3381 @@
+{
+  "screens": [
+    {
+      "id": "login",
+      "title": "Login",
+      "role": "Public",
+      "mode": "login",
+      "buttons": [
+        [
+          841,
+          508,
+          460,
+          42,
+          "admin_dashboard",
+          "Log in as Admin"
+        ],
+        [
+          841,
+          558,
+          225,
+          42,
+          "officer_dashboard",
+          "Officer preview"
+        ],
+        [
+          1076,
+          558,
+          225,
+          42,
+          "student_dashboard",
+          "Student preview"
+        ],
+        [
+          841,
+          621,
+          460,
+          42,
+          "forgot",
+          "Forgot password?"
+        ]
+      ],
+      "inputs": [
+        [
+          840,
+          305,
+          460,
+          52,
+          "Student Number / Username",
+          "Enter student number or username"
+        ],
+        [
+          840,
+          395,
+          460,
+          52,
+          "Password",
+          "Enter your password"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/login.svg"
+    },
+    {
+      "id": "forgot",
+      "title": "Account assistance",
+      "role": "Public",
+      "mode": "forgot",
+      "buttons": [
+        [
+          643,
+          495,
+          310,
+          42,
+          "login",
+          "Back to Login"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/forgot.svg"
+    },
+    {
+      "id": "change_password",
+      "title": "Change temporary password",
+      "role": "Public",
+      "mode": "change_pass",
+      "buttons": [
+        [
+          603,
+          642,
+          660,
+          42,
+          "student_dashboard",
+          "Update Password"
+        ]
+      ],
+      "inputs": [
+        [
+          600,
+          255,
+          675,
+          52,
+          "Current temporary password",
+          "Enter current password"
+        ],
+        [
+          600,
+          370,
+          675,
+          52,
+          "New password",
+          "Enter new password"
+        ],
+        [
+          600,
+          485,
+          675,
+          52,
+          "Confirm password",
+          "Confirm new password"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/change_password.svg"
+    },
+    {
+      "id": "admin_dashboard",
+      "title": "Dashboard",
+      "role": "Admin",
+      "mode": "dashboard",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          1040,
+          412,
+          318,
+          42,
+          "admin_students",
+          "Manage students"
+        ],
+        [
+          1040,
+          467,
+          318,
+          42,
+          "admin_events",
+          "View events"
+        ],
+        [
+          1040,
+          522,
+          318,
+          42,
+          "admin_scanner",
+          "Scan attendance"
+        ],
+        [
+          1040,
+          577,
+          318,
+          42,
+          "admin_fines",
+          "Fines & Payments"
+        ],
+        [
+          1182,
+          736,
+          172,
+          42,
+          "admin_events",
+          "Open events"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_dashboard.svg"
+    },
+    {
+      "id": "admin_students",
+      "title": "Students",
+      "role": "Admin",
+      "mode": "students",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          927,
+          304,
+          122,
+          45,
+          "",
+          "Search"
+        ],
+        [
+          1129,
+          304,
+          224,
+          42,
+          "admin_student_add",
+          "+ Add Student"
+        ],
+        [
+          1218,
+          462,
+          122,
+          31,
+          "admin_student_profile",
+          "View Profile"
+        ],
+        [
+          1218,
+          529,
+          122,
+          31,
+          "admin_student_profile",
+          "View Profile"
+        ],
+        [
+          1218,
+          596,
+          122,
+          31,
+          "admin_student_profile",
+          "View Profile"
+        ],
+        [
+          1012,
+          731,
+          333,
+          42,
+          "admin_fines",
+          "Open Student Fines"
+        ]
+      ],
+      "inputs": [
+        [
+          325,
+          305,
+          575,
+          45,
+          "Find student",
+          "Search student ID or last name"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_students.svg"
+    },
+    {
+      "id": "admin_student_add",
+      "title": "Add student",
+      "role": "Admin",
+      "mode": "student_form",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          985,
+          764,
+          339,
+          42,
+          "admin_students",
+          "Save Student"
+        ],
+        [
+          810,
+          764,
+          160,
+          42,
+          "admin_students",
+          "Cancel"
+        ]
+      ],
+      "inputs": [
+        [
+          334,
+          291,
+          473,
+          45,
+          "Student Number",
+          "2411600166"
+        ],
+        [
+          859,
+          291,
+          473,
+          45,
+          "First Name",
+          "Juan"
+        ],
+        [
+          334,
+          392,
+          473,
+          45,
+          "Middle Name",
+          "Santos"
+        ],
+        [
+          859,
+          392,
+          473,
+          45,
+          "Last Name",
+          "Dela Cruz"
+        ],
+        [
+          334,
+          493,
+          473,
+          45,
+          "Course",
+          "BSIT"
+        ],
+        [
+          859,
+          493,
+          473,
+          45,
+          "Year Level",
+          "2"
+        ],
+        [
+          334,
+          594,
+          473,
+          45,
+          "Section",
+          "A"
+        ],
+        [
+          859,
+          594,
+          473,
+          45,
+          "Email",
+          "optional@rmmc.edu.ph"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_student_add.svg"
+    },
+    {
+      "id": "admin_student_edit",
+      "title": "Edit student",
+      "role": "Admin",
+      "mode": "student_form_edit",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          985,
+          764,
+          339,
+          42,
+          "admin_student_profile",
+          "Save Student"
+        ],
+        [
+          810,
+          764,
+          160,
+          42,
+          "admin_students",
+          "Cancel"
+        ]
+      ],
+      "inputs": [
+        [
+          334,
+          291,
+          473,
+          45,
+          "Student Number",
+          "2411600166"
+        ],
+        [
+          859,
+          291,
+          473,
+          45,
+          "First Name",
+          "Juan"
+        ],
+        [
+          334,
+          392,
+          473,
+          45,
+          "Middle Name",
+          "Santos"
+        ],
+        [
+          859,
+          392,
+          473,
+          45,
+          "Last Name",
+          "Dela Cruz"
+        ],
+        [
+          334,
+          493,
+          473,
+          45,
+          "Course",
+          "BSIT"
+        ],
+        [
+          859,
+          493,
+          473,
+          45,
+          "Year Level",
+          "2"
+        ],
+        [
+          334,
+          594,
+          473,
+          45,
+          "Section",
+          "A"
+        ],
+        [
+          859,
+          594,
+          473,
+          45,
+          "Email",
+          "optional@rmmc.edu.ph"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_student_edit.svg"
+    },
+    {
+      "id": "admin_student_profile",
+      "title": "Student profile",
+      "role": "Admin",
+      "mode": "student_profile",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          1045,
+          362,
+          301,
+          42,
+          "admin_qr",
+          "Open QR Code"
+        ],
+        [
+          1062,
+          722,
+          299,
+          42,
+          "admin_fines",
+          "Fines / Pay"
+        ],
+        [
+          1077,
+          444,
+          260,
+          42,
+          "admin_student_edit",
+          "Edit Student"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_student_profile.svg"
+    },
+    {
+      "id": "admin_events",
+      "title": "Events",
+      "role": "Admin",
+      "mode": "events",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          1134,
+          211,
+          226,
+          42,
+          "admin_event_add",
+          "+ Create Event"
+        ],
+        [
+          815,
+          369,
+          138,
+          37,
+          "admin_event_detail",
+          "View Details"
+        ],
+        [
+          965,
+          369,
+          150,
+          37,
+          "admin_attendance",
+          "Attendance"
+        ],
+        [
+          1130,
+          369,
+          100,
+          37,
+          "admin_event_edit",
+          "Edit"
+        ],
+        [
+          1243,
+          369,
+          102,
+          37,
+          "admin_event_delete",
+          "Delete"
+        ],
+        [
+          815,
+          533,
+          138,
+          37,
+          "admin_event_detail",
+          "View Details"
+        ],
+        [
+          965,
+          533,
+          150,
+          37,
+          "admin_attendance",
+          "Attendance"
+        ],
+        [
+          1130,
+          533,
+          100,
+          37,
+          "admin_event_edit",
+          "Edit"
+        ],
+        [
+          1243,
+          533,
+          102,
+          37,
+          "admin_event_delete",
+          "Delete"
+        ],
+        [
+          815,
+          697,
+          138,
+          37,
+          "admin_event_detail",
+          "View Details"
+        ],
+        [
+          965,
+          697,
+          150,
+          37,
+          "admin_attendance",
+          "Attendance"
+        ],
+        [
+          1130,
+          697,
+          100,
+          37,
+          "admin_event_edit",
+          "Edit"
+        ],
+        [
+          1243,
+          697,
+          102,
+          37,
+          "admin_event_delete",
+          "Delete"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_events.svg"
+    },
+    {
+      "id": "admin_event_add",
+      "title": "Create event",
+      "role": "Admin",
+      "mode": "event_form",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          1085,
+          766,
+          260,
+          42,
+          "admin_events",
+          "Save Event"
+        ],
+        [
+          894,
+          766,
+          172,
+          42,
+          "admin_events",
+          "Cancel"
+        ]
+      ],
+      "inputs": [
+        [
+          329,
+          290,
+          460,
+          45,
+          "Event title",
+          "ITE General Assembly"
+        ],
+        [
+          849,
+          290,
+          460,
+          45,
+          "Venue",
+          "RMMC Main Gym"
+        ],
+        [
+          329,
+          373,
+          460,
+          45,
+          "Start date & time",
+          "2026-11-20 07:30"
+        ],
+        [
+          849,
+          373,
+          460,
+          45,
+          "End date & time",
+          "2026-11-20 17:00"
+        ],
+        [
+          329,
+          456,
+          460,
+          45,
+          "Academic semester",
+          "2026-2027 \u00b7 Semester 1"
+        ],
+        [
+          849,
+          456,
+          460,
+          45,
+          "Status",
+          "Ongoing"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_event_add.svg"
+    },
+    {
+      "id": "admin_event_edit",
+      "title": "Edit event",
+      "role": "Admin",
+      "mode": "event_form_edit",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          1085,
+          766,
+          260,
+          42,
+          "admin_events",
+          "Save Event"
+        ],
+        [
+          894,
+          766,
+          172,
+          42,
+          "admin_events",
+          "Cancel"
+        ]
+      ],
+      "inputs": [
+        [
+          329,
+          290,
+          460,
+          45,
+          "Event title",
+          "ITE General Assembly"
+        ],
+        [
+          849,
+          290,
+          460,
+          45,
+          "Venue",
+          "RMMC Main Gym"
+        ],
+        [
+          329,
+          373,
+          460,
+          45,
+          "Start date & time",
+          "2026-11-20 07:30"
+        ],
+        [
+          849,
+          373,
+          460,
+          45,
+          "End date & time",
+          "2026-11-20 17:00"
+        ],
+        [
+          329,
+          456,
+          460,
+          45,
+          "Academic semester",
+          "2026-2027 \u00b7 Semester 1"
+        ],
+        [
+          849,
+          456,
+          460,
+          45,
+          "Status",
+          "Ongoing"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_event_edit.svg"
+    },
+    {
+      "id": "admin_event_detail",
+      "title": "Event details",
+      "role": "Admin",
+      "mode": "event_detail",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          329,
+          646,
+          240,
+          42,
+          "admin_attendance",
+          "View Attendance"
+        ],
+        [
+          581,
+          646,
+          240,
+          42,
+          "admin_scanner",
+          "Scan Student QR"
+        ],
+        [
+          833,
+          646,
+          240,
+          42,
+          "admin_event_edit",
+          "Edit Event"
+        ],
+        [
+          1085,
+          646,
+          240,
+          42,
+          "admin_event_delete",
+          "Delete Event"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_event_detail.svg"
+    },
+    {
+      "id": "admin_event_delete",
+      "title": "Delete event?",
+      "role": "Admin",
+      "mode": "delete",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          504,
+          530,
+          285,
+          42,
+          "admin_events",
+          "Cancel"
+        ],
+        [
+          817,
+          530,
+          324,
+          42,
+          "admin_events",
+          "Confirm Delete (demo)"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_event_delete.svg"
+    },
+    {
+      "id": "admin_attendance",
+      "title": "Attendance",
+      "role": "Admin",
+      "mode": "attendance",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          763,
+          300,
+          141,
+          45,
+          "",
+          "Load"
+        ],
+        [
+          1102,
+          300,
+          258,
+          42,
+          "admin_scanner",
+          "Scan Attendance"
+        ],
+        [
+          324,
+          406,
+          1040,
+          76,
+          "admin_attendance_expanded",
+          "Toggle event"
+        ],
+        [
+          324,
+          536,
+          1040,
+          76,
+          "admin_attendance_expanded",
+          "Toggle event"
+        ]
+      ],
+      "inputs": [
+        [
+          328,
+          300,
+          420,
+          45,
+          "Event",
+          "ITE General Assembly"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_attendance.svg"
+    },
+    {
+      "id": "admin_attendance_expanded",
+      "title": "Event attendance - expanded",
+      "role": "Admin",
+      "mode": "attendance_expanded",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          763,
+          300,
+          141,
+          45,
+          "",
+          "Load"
+        ],
+        [
+          1102,
+          300,
+          258,
+          42,
+          "admin_scanner",
+          "Scan Attendance"
+        ],
+        [
+          324,
+          406,
+          1040,
+          76,
+          "admin_attendance",
+          "Toggle event"
+        ],
+        [
+          324,
+          536,
+          1040,
+          76,
+          "admin_attendance",
+          "Toggle event"
+        ]
+      ],
+      "inputs": [
+        [
+          328,
+          300,
+          420,
+          45,
+          "Event",
+          "ITE General Assembly"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_attendance_expanded.svg"
+    },
+    {
+      "id": "admin_scanner",
+      "title": "QR Scanner",
+      "role": "Admin",
+      "mode": "scanner",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          352,
+          698,
+          205,
+          42,
+          "",
+          "Start Camera"
+        ],
+        [
+          571,
+          698,
+          220,
+          42,
+          "",
+          "Stop Camera"
+        ],
+        [
+          871,
+          698,
+          457,
+          42,
+          "admin_scanner_result",
+          "Record Student Attendance"
+        ],
+        [
+          330,
+          769,
+          380,
+          42,
+          "admin_import",
+          "Import CSV / Excel Attendance"
+        ]
+      ],
+      "inputs": [
+        [
+          330,
+          284,
+          490,
+          45,
+          "Event",
+          "ITE General Assembly"
+        ],
+        [
+          840,
+          284,
+          516,
+          45,
+          "Attendance checkpoint",
+          "Morning In"
+        ],
+        [
+          871,
+          485,
+          457,
+          45,
+          "Student Number",
+          "e.g. 2411600165"
+        ],
+        [
+          871,
+          579,
+          457,
+          45,
+          "Reason",
+          "Camera unavailable / ID verified"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_scanner.svg"
+    },
+    {
+      "id": "admin_scanner_result",
+      "title": "Attendance recorded",
+      "role": "Admin",
+      "mode": "scanner_result",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          475,
+          665,
+          348,
+          42,
+          "admin_scanner",
+          "Scan Next Student"
+        ],
+        [
+          838,
+          665,
+          338,
+          42,
+          "admin_attendance",
+          "View Attendance"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_scanner_result.svg"
+    },
+    {
+      "id": "admin_import",
+      "title": "Bulk attendance import",
+      "role": "Admin",
+      "mode": "import",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          662,
+          561,
+          358,
+          42,
+          "",
+          "Choose Attendance File"
+        ],
+        [
+          1019,
+          712,
+          326,
+          42,
+          "admin_import_preview",
+          "Preview & Match Students"
+        ],
+        [
+          330,
+          712,
+          245,
+          42,
+          "admin_scanner",
+          "Back to Scanner"
+        ]
+      ],
+      "inputs": [
+        [
+          332,
+          306,
+          491,
+          45,
+          "Event",
+          "ITE General Assembly"
+        ],
+        [
+          850,
+          306,
+          500,
+          45,
+          "Checkpoint",
+          "Morning In"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_import.svg"
+    },
+    {
+      "id": "admin_import_preview",
+      "title": "Review imported attendance",
+      "role": "Admin",
+      "mode": "import_preview",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          338,
+          730,
+          252,
+          42,
+          "admin_import",
+          "Back to Upload"
+        ],
+        [
+          980,
+          730,
+          357,
+          42,
+          "admin_import_done",
+          "Confirm Attendance Import"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_import_preview.svg"
+    },
+    {
+      "id": "admin_import_done",
+      "title": "Attendance imported",
+      "role": "Admin",
+      "mode": "import_done",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          446,
+          635,
+          362,
+          42,
+          "admin_import",
+          "Import Another Checkpoint"
+        ],
+        [
+          831,
+          635,
+          417,
+          42,
+          "admin_attendance",
+          "Open Attendance"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_import_done.svg"
+    },
+    {
+      "id": "admin_fines",
+      "title": "Fines & Payments",
+      "role": "Admin",
+      "mode": "fines",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          871,
+          289,
+          160,
+          42,
+          "",
+          "Search"
+        ],
+        [
+          1051,
+          289,
+          306,
+          42,
+          "admin_fines_payment",
+          "+ Record Payment"
+        ],
+        [
+          1187,
+          439,
+          147,
+          33,
+          "admin_fines_payment",
+          "Record Pay"
+        ],
+        [
+          1187,
+          577,
+          147,
+          33,
+          "admin_fines_payment",
+          "Record Pay"
+        ]
+      ],
+      "inputs": [
+        [
+          328,
+          289,
+          530,
+          45,
+          "Search student",
+          "Student Number or last name"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_fines.svg"
+    },
+    {
+      "id": "admin_fines_payment",
+      "title": "Record payment",
+      "role": "Admin",
+      "mode": "payment",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          1042,
+          709,
+          294,
+          42,
+          "admin_fines_paid",
+          "Record Payment"
+        ]
+      ],
+      "inputs": [
+        [
+          333,
+          304,
+          465,
+          45,
+          "Student",
+          "Alex R. Santos \u00b7 2411600165"
+        ],
+        [
+          824,
+          304,
+          535,
+          45,
+          "Payment method",
+          "Cash"
+        ],
+        [
+          333,
+          682,
+          300,
+          45,
+          "Amount received",
+          "40.00"
+        ],
+        [
+          655,
+          682,
+          360,
+          45,
+          "Receipt / Reference",
+          "RMMC-2026-0001"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_fines_payment.svg"
+    },
+    {
+      "id": "admin_fines_paid",
+      "title": "Payment recorded",
+      "role": "Admin",
+      "mode": "payment_done",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          465,
+          676,
+          342,
+          42,
+          "admin_fines",
+          "Back to Payment List"
+        ],
+        [
+          822,
+          676,
+          344,
+          42,
+          "admin_clearance",
+          "View Clearance"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_fines_paid.svg"
+    },
+    {
+      "id": "admin_clearance",
+      "title": "Clearance",
+      "role": "Admin",
+      "mode": "clearance",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          904,
+          299,
+          159,
+          42,
+          "",
+          "Search"
+        ],
+        [
+          1187,
+          447,
+          150,
+          35,
+          "admin_clearance_student",
+          "Review"
+        ],
+        [
+          1187,
+          515,
+          150,
+          35,
+          "admin_clearance_student",
+          "Review"
+        ],
+        [
+          1187,
+          583,
+          150,
+          35,
+          "admin_clearance_student",
+          "Review"
+        ]
+      ],
+      "inputs": [
+        [
+          330,
+          299,
+          560,
+          45,
+          "Search Student ID or Last Name",
+          "e.g. Santos or 2411600165"
+        ],
+        [
+          1081,
+          299,
+          275,
+          45,
+          "Semester",
+          "2026-2027 / 1"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_clearance.svg"
+    },
+    {
+      "id": "admin_clearance_student",
+      "title": "Review clearance",
+      "role": "Admin",
+      "mode": "clearance_profile",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          330,
+          716,
+          308,
+          42,
+          "admin_clearance",
+          "Back to Students"
+        ],
+        [
+          1002,
+          716,
+          347,
+          42,
+          "admin_clearance_done",
+          "Preview Cleared State"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_clearance_student.svg"
+    },
+    {
+      "id": "admin_clearance_done",
+      "title": "Clearance approved",
+      "role": "Admin",
+      "mode": "clearance_done",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          481,
+          639,
+          350,
+          42,
+          "admin_clearance",
+          "Back to Clearance"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_clearance_done.svg"
+    },
+    {
+      "id": "admin_semesters",
+      "title": "Semesters",
+      "role": "Admin",
+      "mode": "semesters",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          1129,
+          218,
+          223,
+          42,
+          "admin_semester_add",
+          "+ Add Semester"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_semesters.svg"
+    },
+    {
+      "id": "admin_semester_add",
+      "title": "Add semester",
+      "role": "Admin",
+      "mode": "semester_form",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          859,
+          649,
+          346,
+          42,
+          "admin_semesters",
+          "Save Semester"
+        ],
+        [
+          426,
+          649,
+          295,
+          42,
+          "admin_semesters",
+          "Cancel"
+        ]
+      ],
+      "inputs": [
+        [
+          420,
+          318,
+          373,
+          45,
+          "Academic Year",
+          "2026-2027"
+        ],
+        [
+          836,
+          318,
+          373,
+          45,
+          "Semester Number",
+          "2"
+        ],
+        [
+          420,
+          436,
+          373,
+          45,
+          "Start Date",
+          "2027-01-10"
+        ],
+        [
+          836,
+          436,
+          373,
+          45,
+          "End Date",
+          "2027-05-30"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_semester_add.svg"
+    },
+    {
+      "id": "admin_users",
+      "title": "User management",
+      "role": "Admin",
+      "mode": "users",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          1123,
+          212,
+          236,
+          42,
+          "admin_officer_add",
+          "+ Add Officer"
+        ],
+        [
+          1178,
+          509,
+          170,
+          42,
+          "admin_officer_edit",
+          "Edit Officer"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_users.svg"
+    },
+    {
+      "id": "admin_officer_add",
+      "title": "Add Officer",
+      "role": "Admin",
+      "mode": "officer_form",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          1042,
+          759,
+          306,
+          42,
+          "admin_users",
+          "Save Officer"
+        ],
+        [
+          853,
+          759,
+          171,
+          42,
+          "admin_users",
+          "Cancel"
+        ]
+      ],
+      "inputs": [
+        [
+          332,
+          281,
+          470,
+          45,
+          "Login ID",
+          "juan.ite"
+        ],
+        [
+          850,
+          281,
+          470,
+          45,
+          "First Name",
+          "Juan"
+        ],
+        [
+          332,
+          379,
+          470,
+          45,
+          "Middle Name",
+          "Santos"
+        ],
+        [
+          850,
+          379,
+          470,
+          45,
+          "Last Name",
+          "Dela Cruz"
+        ],
+        [
+          332,
+          477,
+          470,
+          45,
+          "Email",
+          "officer@rmmc.edu.ph"
+        ],
+        [
+          850,
+          477,
+          470,
+          45,
+          "Organization Name",
+          "ITE Student Council"
+        ],
+        [
+          332,
+          575,
+          470,
+          45,
+          "Position Title",
+          "Secretary"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_officer_add.svg"
+    },
+    {
+      "id": "admin_officer_edit",
+      "title": "Edit Officer",
+      "role": "Admin",
+      "mode": "officer_form_edit",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          1042,
+          759,
+          306,
+          42,
+          "admin_users",
+          "Save Officer"
+        ],
+        [
+          853,
+          759,
+          171,
+          42,
+          "admin_users",
+          "Cancel"
+        ]
+      ],
+      "inputs": [
+        [
+          332,
+          281,
+          470,
+          45,
+          "Login ID",
+          "juan.ite"
+        ],
+        [
+          850,
+          281,
+          470,
+          45,
+          "First Name",
+          "Juan"
+        ],
+        [
+          332,
+          379,
+          470,
+          45,
+          "Middle Name",
+          "Santos"
+        ],
+        [
+          850,
+          379,
+          470,
+          45,
+          "Last Name",
+          "Dela Cruz"
+        ],
+        [
+          332,
+          477,
+          470,
+          45,
+          "Email",
+          "officer@rmmc.edu.ph"
+        ],
+        [
+          850,
+          477,
+          470,
+          45,
+          "Organization Name",
+          "ITE Student Council"
+        ],
+        [
+          332,
+          575,
+          470,
+          45,
+          "Position Title",
+          "Secretary"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_officer_edit.svg"
+    },
+    {
+      "id": "admin_qr",
+      "title": "My QR Code",
+      "role": "Admin",
+      "mode": "qr",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          1041,
+          748,
+          295,
+          42,
+          "",
+          "Print ID Card"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_qr.svg"
+    },
+    {
+      "id": "admin_settings",
+      "title": "Settings",
+      "role": "Admin",
+      "mode": "settings",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          331,
+          731,
+          574,
+          42,
+          "",
+          "Save Profile"
+        ],
+        [
+          1003,
+          288,
+          361,
+          42,
+          "change_password",
+          "Change My Password"
+        ],
+        [
+          1003,
+          351,
+          361,
+          42,
+          "admin_reset",
+          "Find User & Reset Password"
+        ]
+      ],
+      "inputs": [
+        [
+          330,
+          303,
+          587,
+          45,
+          "Username",
+          "Admin"
+        ],
+        [
+          330,
+          400,
+          587,
+          45,
+          "Full Name",
+          "System Administrator"
+        ],
+        [
+          330,
+          497,
+          587,
+          45,
+          "Email",
+          "Optional"
+        ],
+        [
+          330,
+          594,
+          587,
+          45,
+          "Account Role",
+          "Admin"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_settings.svg"
+    },
+    {
+      "id": "admin_reset",
+      "title": "Reset password",
+      "role": "Admin",
+      "mode": "reset",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          1025,
+          302,
+          323,
+          42,
+          "",
+          "Search Account"
+        ],
+        [
+          986,
+          717,
+          367,
+          42,
+          "admin_reset_done",
+          "Reset Temporary Password"
+        ]
+      ],
+      "inputs": [
+        [
+          328,
+          301,
+          668,
+          45,
+          "Student ID or username",
+          "2411600165"
+        ],
+        [
+          328,
+          570,
+          490,
+          45,
+          "Temporary password option",
+          "student123 / officer123 / Custom"
+        ],
+        [
+          846,
+          570,
+          506,
+          45,
+          "Confirm Admin password",
+          "Required for reset"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_reset.svg"
+    },
+    {
+      "id": "admin_reset_done",
+      "title": "Temporary password assigned",
+      "role": "Admin",
+      "mode": "reset_done",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          464,
+          654,
+          349,
+          42,
+          "admin_reset",
+          "Reset Another Account"
+        ],
+        [
+          842,
+          654,
+          347,
+          42,
+          "admin_settings",
+          "Back to Settings"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/admin_reset_done.svg"
+    },
+    {
+      "id": "officer_dashboard",
+      "title": "Dashboard",
+      "role": "Officer",
+      "mode": "dashboard",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          1040,
+          412,
+          318,
+          42,
+          "officer_students",
+          "Student directory"
+        ],
+        [
+          1040,
+          467,
+          318,
+          42,
+          "officer_scanner",
+          "Record attendance"
+        ],
+        [
+          1040,
+          522,
+          318,
+          42,
+          "officer_import",
+          "Import CSV / Excel"
+        ],
+        [
+          1040,
+          577,
+          318,
+          42,
+          "officer_clearance",
+          "Review clearance"
+        ],
+        [
+          1182,
+          736,
+          172,
+          42,
+          "officer_events",
+          "Open events"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/officer_dashboard.svg"
+    },
+    {
+      "id": "officer_students",
+      "title": "Students",
+      "role": "Officer",
+      "mode": "students",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          927,
+          304,
+          122,
+          45,
+          "",
+          "Search"
+        ],
+        [
+          1218,
+          462,
+          122,
+          31,
+          "officer_student_profile",
+          "View Profile"
+        ],
+        [
+          1218,
+          529,
+          122,
+          31,
+          "officer_student_profile",
+          "View Profile"
+        ],
+        [
+          1218,
+          596,
+          122,
+          31,
+          "officer_student_profile",
+          "View Profile"
+        ],
+        [
+          1012,
+          731,
+          333,
+          42,
+          "officer_fines",
+          "Open Student Fines"
+        ]
+      ],
+      "inputs": [
+        [
+          325,
+          305,
+          575,
+          45,
+          "Find student",
+          "Search student ID or last name"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/officer_students.svg"
+    },
+    {
+      "id": "officer_student_profile",
+      "title": "Student profile",
+      "role": "Officer",
+      "mode": "student_profile",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          1045,
+          362,
+          301,
+          42,
+          "officer_qr",
+          "Open QR Code"
+        ],
+        [
+          1062,
+          722,
+          299,
+          42,
+          "officer_fines",
+          "Fines / Pay"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/officer_student_profile.svg"
+    },
+    {
+      "id": "officer_events",
+      "title": "Events",
+      "role": "Officer",
+      "mode": "events",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          815,
+          369,
+          138,
+          37,
+          "officer_attendance",
+          "View Details"
+        ],
+        [
+          965,
+          369,
+          150,
+          37,
+          "officer_attendance",
+          "Attendance"
+        ],
+        [
+          815,
+          533,
+          138,
+          37,
+          "officer_attendance",
+          "View Details"
+        ],
+        [
+          965,
+          533,
+          150,
+          37,
+          "officer_attendance",
+          "Attendance"
+        ],
+        [
+          815,
+          697,
+          138,
+          37,
+          "officer_attendance",
+          "View Details"
+        ],
+        [
+          965,
+          697,
+          150,
+          37,
+          "officer_attendance",
+          "Attendance"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/officer_events.svg"
+    },
+    {
+      "id": "officer_attendance",
+      "title": "Attendance",
+      "role": "Officer",
+      "mode": "attendance",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          763,
+          300,
+          141,
+          45,
+          "",
+          "Load"
+        ],
+        [
+          1102,
+          300,
+          258,
+          42,
+          "officer_scanner",
+          "Scan Attendance"
+        ],
+        [
+          324,
+          406,
+          1040,
+          76,
+          "officer_attendance_expanded",
+          "Toggle event"
+        ],
+        [
+          324,
+          536,
+          1040,
+          76,
+          "officer_attendance_expanded",
+          "Toggle event"
+        ]
+      ],
+      "inputs": [
+        [
+          328,
+          300,
+          420,
+          45,
+          "Event",
+          "ITE General Assembly"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/officer_attendance.svg"
+    },
+    {
+      "id": "officer_attendance_expanded",
+      "title": "Event attendance - expanded",
+      "role": "Officer",
+      "mode": "attendance_expanded",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          763,
+          300,
+          141,
+          45,
+          "",
+          "Load"
+        ],
+        [
+          1102,
+          300,
+          258,
+          42,
+          "officer_scanner",
+          "Scan Attendance"
+        ],
+        [
+          324,
+          406,
+          1040,
+          76,
+          "officer_attendance",
+          "Toggle event"
+        ],
+        [
+          324,
+          536,
+          1040,
+          76,
+          "officer_attendance",
+          "Toggle event"
+        ]
+      ],
+      "inputs": [
+        [
+          328,
+          300,
+          420,
+          45,
+          "Event",
+          "ITE General Assembly"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/officer_attendance_expanded.svg"
+    },
+    {
+      "id": "officer_scanner",
+      "title": "QR Scanner",
+      "role": "Officer",
+      "mode": "scanner",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          352,
+          698,
+          205,
+          42,
+          "",
+          "Start Camera"
+        ],
+        [
+          571,
+          698,
+          220,
+          42,
+          "",
+          "Stop Camera"
+        ],
+        [
+          871,
+          698,
+          457,
+          42,
+          "officer_scanner_result",
+          "Record Student Attendance"
+        ],
+        [
+          330,
+          769,
+          380,
+          42,
+          "officer_import",
+          "Import CSV / Excel Attendance"
+        ]
+      ],
+      "inputs": [
+        [
+          330,
+          284,
+          490,
+          45,
+          "Event",
+          "ITE General Assembly"
+        ],
+        [
+          840,
+          284,
+          516,
+          45,
+          "Attendance checkpoint",
+          "Morning In"
+        ],
+        [
+          871,
+          485,
+          457,
+          45,
+          "Student Number",
+          "e.g. 2411600165"
+        ],
+        [
+          871,
+          579,
+          457,
+          45,
+          "Reason",
+          "Camera unavailable / ID verified"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/officer_scanner.svg"
+    },
+    {
+      "id": "officer_scanner_result",
+      "title": "Attendance recorded",
+      "role": "Officer",
+      "mode": "scanner_result",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          475,
+          665,
+          348,
+          42,
+          "officer_scanner",
+          "Scan Next Student"
+        ],
+        [
+          838,
+          665,
+          338,
+          42,
+          "officer_attendance",
+          "View Attendance"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/officer_scanner_result.svg"
+    },
+    {
+      "id": "officer_import",
+      "title": "Bulk attendance import",
+      "role": "Officer",
+      "mode": "import",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          662,
+          561,
+          358,
+          42,
+          "",
+          "Choose Attendance File"
+        ],
+        [
+          1019,
+          712,
+          326,
+          42,
+          "officer_import_preview",
+          "Preview & Match Students"
+        ],
+        [
+          330,
+          712,
+          245,
+          42,
+          "officer_scanner",
+          "Back to Scanner"
+        ]
+      ],
+      "inputs": [
+        [
+          332,
+          306,
+          491,
+          45,
+          "Event",
+          "ITE General Assembly"
+        ],
+        [
+          850,
+          306,
+          500,
+          45,
+          "Checkpoint",
+          "Morning In"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/officer_import.svg"
+    },
+    {
+      "id": "officer_import_preview",
+      "title": "Review imported attendance",
+      "role": "Officer",
+      "mode": "import_preview",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          338,
+          730,
+          252,
+          42,
+          "officer_import",
+          "Back to Upload"
+        ],
+        [
+          980,
+          730,
+          357,
+          42,
+          "officer_import_done",
+          "Confirm Attendance Import"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/officer_import_preview.svg"
+    },
+    {
+      "id": "officer_import_done",
+      "title": "Attendance imported",
+      "role": "Officer",
+      "mode": "import_done",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          446,
+          635,
+          362,
+          42,
+          "officer_import",
+          "Import Another Checkpoint"
+        ],
+        [
+          831,
+          635,
+          417,
+          42,
+          "officer_attendance",
+          "Open Attendance"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/officer_import_done.svg"
+    },
+    {
+      "id": "officer_fines",
+      "title": "Fines & Payments",
+      "role": "Officer",
+      "mode": "fines",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          871,
+          289,
+          160,
+          42,
+          "",
+          "Search"
+        ],
+        [
+          1051,
+          289,
+          306,
+          42,
+          "officer_fines_payment",
+          "+ Record Payment"
+        ],
+        [
+          1187,
+          439,
+          147,
+          33,
+          "officer_fines_payment",
+          "Record Pay"
+        ],
+        [
+          1187,
+          577,
+          147,
+          33,
+          "officer_fines_payment",
+          "Record Pay"
+        ]
+      ],
+      "inputs": [
+        [
+          328,
+          289,
+          530,
+          45,
+          "Search student",
+          "Student Number or last name"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/officer_fines.svg"
+    },
+    {
+      "id": "officer_fines_payment",
+      "title": "Record payment",
+      "role": "Officer",
+      "mode": "payment",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          1042,
+          709,
+          294,
+          42,
+          "officer_fines_paid",
+          "Record Payment"
+        ]
+      ],
+      "inputs": [
+        [
+          333,
+          304,
+          465,
+          45,
+          "Student",
+          "Alex R. Santos \u00b7 2411600165"
+        ],
+        [
+          824,
+          304,
+          535,
+          45,
+          "Payment method",
+          "Cash"
+        ],
+        [
+          333,
+          682,
+          300,
+          45,
+          "Amount received",
+          "40.00"
+        ],
+        [
+          655,
+          682,
+          360,
+          45,
+          "Receipt / Reference",
+          "RMMC-2026-0001"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/officer_fines_payment.svg"
+    },
+    {
+      "id": "officer_fines_paid",
+      "title": "Payment recorded",
+      "role": "Officer",
+      "mode": "payment_done",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          465,
+          676,
+          342,
+          42,
+          "officer_fines",
+          "Back to Payment List"
+        ],
+        [
+          822,
+          676,
+          344,
+          42,
+          "officer_clearance",
+          "View Clearance"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/officer_fines_paid.svg"
+    },
+    {
+      "id": "officer_clearance",
+      "title": "Clearance",
+      "role": "Officer",
+      "mode": "clearance",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          904,
+          299,
+          159,
+          42,
+          "",
+          "Search"
+        ],
+        [
+          1187,
+          447,
+          150,
+          35,
+          "officer_clearance_student",
+          "Review"
+        ],
+        [
+          1187,
+          515,
+          150,
+          35,
+          "officer_clearance_student",
+          "Review"
+        ],
+        [
+          1187,
+          583,
+          150,
+          35,
+          "officer_clearance_student",
+          "Review"
+        ]
+      ],
+      "inputs": [
+        [
+          330,
+          299,
+          560,
+          45,
+          "Search Student ID or Last Name",
+          "e.g. Santos or 2411600165"
+        ],
+        [
+          1081,
+          299,
+          275,
+          45,
+          "Semester",
+          "2026-2027 / 1"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/officer_clearance.svg"
+    },
+    {
+      "id": "officer_clearance_student",
+      "title": "Review clearance",
+      "role": "Officer",
+      "mode": "clearance_profile",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          330,
+          716,
+          308,
+          42,
+          "officer_clearance",
+          "Back to Students"
+        ],
+        [
+          1002,
+          716,
+          347,
+          42,
+          "officer_clearance_done",
+          "Preview Cleared State"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/officer_clearance_student.svg"
+    },
+    {
+      "id": "officer_clearance_done",
+      "title": "Clearance approved",
+      "role": "Officer",
+      "mode": "clearance_done",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          481,
+          639,
+          350,
+          42,
+          "officer_clearance",
+          "Back to Clearance"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/officer_clearance_done.svg"
+    },
+    {
+      "id": "officer_qr",
+      "title": "My QR Code",
+      "role": "Officer",
+      "mode": "qr",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          1041,
+          748,
+          295,
+          42,
+          "",
+          "Print ID Card"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/officer_qr.svg"
+    },
+    {
+      "id": "officer_settings",
+      "title": "Settings",
+      "role": "Officer",
+      "mode": "settings",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          331,
+          731,
+          574,
+          42,
+          "",
+          "Save Profile"
+        ],
+        [
+          1003,
+          288,
+          361,
+          42,
+          "change_password",
+          "Change My Password"
+        ]
+      ],
+      "inputs": [
+        [
+          330,
+          303,
+          587,
+          45,
+          "Username",
+          "marian.ite"
+        ],
+        [
+          330,
+          400,
+          587,
+          45,
+          "Full Name",
+          "Marian Begonte"
+        ],
+        [
+          330,
+          497,
+          587,
+          45,
+          "Email",
+          "Optional"
+        ],
+        [
+          330,
+          594,
+          587,
+          45,
+          "Account Role",
+          "Officer"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/officer_settings.svg"
+    },
+    {
+      "id": "student_dashboard",
+      "title": "Dashboard",
+      "role": "Student",
+      "mode": "student_dashboard",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          1058,
+          412,
+          290,
+          42,
+          "student_qr",
+          "Open QR ID Card"
+        ],
+        [
+          713,
+          761,
+          244,
+          37,
+          "student_attendance",
+          "All attendance"
+        ],
+        [
+          1032,
+          748,
+          329,
+          42,
+          "student_fines",
+          "View Fines & Payments"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/student_dashboard.svg"
+    },
+    {
+      "id": "student_events",
+      "title": "Events",
+      "role": "Student",
+      "mode": "student_events",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          1017,
+          708,
+          327,
+          42,
+          "student_attendance",
+          "View My Attendance"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/student_events.svg"
+    },
+    {
+      "id": "student_attendance",
+      "title": "Attendance",
+      "role": "Student",
+      "mode": "student_attendance",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          1044,
+          721,
+          296,
+          42,
+          "student_fines",
+          "View My Fines"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/student_attendance.svg"
+    },
+    {
+      "id": "student_fines",
+      "title": "Fines & Payments",
+      "role": "Student",
+      "mode": "student_fines",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          1040,
+          723,
+          308,
+          42,
+          "student_clearance",
+          "View Clearance"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/student_fines.svg"
+    },
+    {
+      "id": "student_clearance",
+      "title": "Clearance",
+      "role": "Student",
+      "mode": "student_clearance",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          1003,
+          687,
+          337,
+          42,
+          "student_fines",
+          "View Fines & Payments"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/student_clearance.svg"
+    },
+    {
+      "id": "student_qr",
+      "title": "My QR Code",
+      "role": "Student",
+      "mode": "qr",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          1041,
+          748,
+          295,
+          42,
+          "",
+          "Print ID Card"
+        ]
+      ],
+      "inputs": [],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/student_qr.svg"
+    },
+    {
+      "id": "student_settings",
+      "title": "Settings",
+      "role": "Student",
+      "mode": "settings",
+      "buttons": [
+        [
+          20,
+          845,
+          220,
+          40,
+          "login",
+          "Sign out"
+        ],
+        [
+          331,
+          731,
+          574,
+          42,
+          "",
+          "Save Profile"
+        ],
+        [
+          1003,
+          288,
+          361,
+          42,
+          "change_password",
+          "Change My Password"
+        ]
+      ],
+      "inputs": [
+        [
+          330,
+          303,
+          587,
+          45,
+          "Username",
+          "2411600165"
+        ],
+        [
+          330,
+          400,
+          587,
+          45,
+          "Full Name",
+          "Alex R. Santos"
+        ],
+        [
+          330,
+          497,
+          587,
+          45,
+          "Email",
+          "Optional"
+        ],
+        [
+          330,
+          594,
+          587,
+          45,
+          "Account Role",
+          "Student"
+        ]
+      ],
+      "w": 1440,
+      "h": 900,
+      "src": "screens/student_settings.svg"
+    }
+  ],
+  "nav": {
+    "Admin": [
+      "Dashboard",
+      "Students",
+      "Events",
+      "Attendance",
+      "QR Scanner",
+      "Fines & Payments",
+      "Clearance",
+      "Semesters",
+      "User Management",
+      "My QR Code",
+      "Settings"
+    ],
+    "Officer": [
+      "Dashboard",
+      "Students",
+      "Events",
+      "Attendance",
+      "QR Scanner",
+      "Fines & Payments",
+      "Clearance",
+      "My QR Code",
+      "Settings"
+    ],
+    "Student": [
+      "Dashboard",
+      "Events",
+      "Attendance",
+      "Fines & Payments",
+      "Clearance",
+      "My QR Code",
+      "Settings"
+    ]
+  },
+  "dest": {
+    "Dashboard": "dashboard",
+    "Students": "students",
+    "Events": "events",
+    "Attendance": "attendance",
+    "QR Scanner": "scanner",
+    "Fines & Payments": "fines",
+    "Clearance": "clearance",
+    "Semesters": "semesters",
+    "User Management": "users",
+    "My QR Code": "qr",
+    "Settings": "settings"
+  }
+}

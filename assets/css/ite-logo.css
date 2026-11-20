@@ -1,0 +1,126 @@
+/* ITE dashboard branding — scoped to logo and dashboard hero only. */
+.ite-sidebar-logo {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 50%;
+  padding: 2px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+}
+.brand > div { min-width: 0; }
+.ite-dashboard-hero {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 24px 28px;
+  border: 1px solid #edd7dc;
+  border-radius: 15px;
+  background: linear-gradient(115deg, #ffffff 15%, #fff3f4 100%);
+  box-shadow: var(--shadow, 0 2px 12px rgba(16, 24, 40, .06));
+  margin-bottom: 24px;
+}
+.ite-dashboard-hero-logo {
+  width: 88px;
+  height: 88px;
+  flex: 0 0 88px;
+  object-fit: contain;
+  border-radius: 50%;
+  padding: 5px;
+  background: white;
+  border: 1px solid #f2d4d8;
+  box-shadow: 0 4px 14px rgba(153,27,27,.10);
+}
+.ite-dashboard-hero-copy { flex: 1; min-width: 0; }
+.ite-dashboard-hero-eyebrow {
+  color: #a11c28 !important;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  margin: 0 0 8px !important;
+}
+.ite-dashboard-hero-copy h1 {
+  font-size: clamp(20px,2.5vw,28px);
+  line-height: 1.22;
+  margin: 0 0 7px;
+}
+.ite-dashboard-hero-copy p:last-child {
+  margin: 0;
+  font-size: 13px;
+  color: #667085;
+}
+.ite-dashboard-hero-actions { flex: 0 0 auto; }
+@media (max-width: 760px) {
+  .ite-dashboard-hero { flex-wrap: wrap; gap: 14px; padding: 17px; }
+  .ite-dashboard-hero-logo { width: 66px; height: 66px; flex-basis: 66px; }
+  .ite-dashboard-hero-copy { flex-basis: calc(100% - 84px); }
+  .ite-dashboard-hero-actions { width: 100%; }
+  .ite-dashboard-hero-actions .btn { width: 100%; }
+}
+@media print {
+  .ite-dashboard-hero { box-shadow: none; }
+}
+
+/* Student dashboard redesign: scoped; Admin and Officer views stay unchanged. */
+.student-dashboard{color:#22283a}
+.student-dashboard-title{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:29px}
+.student-dashboard-title h1{font-size:30px;font-weight:800;letter-spacing:-.04em;line-height:1.15;margin:0 0 8px}
+.student-dashboard-title p{color:#69758b;font-size:14px;margin:0}
+.student-dashboard-main-action{width:200px;min-height:50px;background:#bc171c;border-radius:11px;font-size:14px}
+.student-dashboard-top,.student-dashboard-bottom{display:grid;gap:28px;align-items:stretch}
+.student-dashboard-top{grid-template-columns:minmax(290px,.85fr) minmax(0,1.3fr);margin-bottom:28px}
+.student-dashboard-bottom{grid-template-columns:minmax(0,1.7fr) minmax(280px,.92fr)}
+.student-dashboard-card{min-width:0;background:#fff;border:1px solid #e3e7ee;border-radius:21px;padding:29px;box-shadow:0 1px 2px rgba(13,27,46,.018)}
+.student-dashboard-card h2{font-size:21px;font-weight:800;letter-spacing:-.025em;color:#252a3c;margin:0}
+.student-profile-overview{display:flex;gap:19px;align-items:flex-start;margin-bottom:31px}
+.student-profile-avatar{display:grid;place-items:center;flex:0 0 66px;width:66px;height:66px;border-radius:50%;background:#ffe1e1;color:#9c131b;font-size:17px;font-weight:800}
+.student-profile-overview h2{font-size:24px;line-height:1.22;margin:3px 0 11px}
+.student-profile-overview p{color:#69758b;font-size:14px;margin:0 0 12px}
+.student-profile-state{display:inline-block;background:#dbfbe8;color:#147c45;padding:5px 22px;border-radius:30px;font-size:13px;font-weight:700}
+.student-profile-details{display:flex;flex-direction:column;gap:17px;margin:0;padding:8px 0 0 8px}
+.student-profile-details>div{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
+.student-profile-details dt{color:#69758b;font-size:13px;flex:0 0 34%}
+.student-profile-details dd{text-align:right;color:#24293b;font-size:13px;font-weight:700;margin:0;overflow-wrap:anywhere}
+.student-dashboard-qr .student-dashboard-desc,.student-dashboard-section-heading p{font-size:13px;color:#69758b;margin:3px 0 0}
+.student-qr-layout{display:grid;grid-template-columns:minmax(205px,245px) minmax(0,1fr);align-items:center;gap:40px;margin-top:4px}
+.student-qr-frame{display:flex;align-items:center;justify-content:center;width:233px;height:233px;max-width:100%;border:1px solid #e1e5ed;border-radius:13px;background:#fff;padding:11px}
+#student-dashboard-qr{display:grid;place-items:center;max-width:100%;text-align:center;font-size:12px;color:#69758b}
+#student-dashboard-qr img,#student-dashboard-qr canvas{display:block;max-width:100%;height:auto}
+.student-qr-description{display:flex;flex-direction:column;min-width:0}
+.student-qr-description h3{font-size:21px;letter-spacing:-.02em;margin:0 0 9px}
+.student-qr-description p{font-size:14px;color:#69758b;margin:0 0 8px}
+.student-qr-description .student-qr-note{color:#96a0b0;margin-bottom:24px;font-size:12px}
+.student-qr-print{min-height:46px;width:100%;border-radius:11px;font-size:13px}
+.student-qr-view-link{display:inline-block;font-size:12px;font-weight:600;text-align:center;margin-top:12px}
+.student-dashboard-section-heading{display:flex;gap:12px;justify-content:space-between;align-items:flex-start;margin-bottom:20px}
+.student-dashboard-section-heading a{font-size:12px;font-weight:700;white-space:nowrap;margin-top:4px}
+.student-dashboard-table-scroll{width:100%;overflow-x:auto;border-radius:12px}
+.student-dashboard-table{width:100%;min-width:760px;border-collapse:collapse;text-align:left}
+.student-dashboard-table thead{background:#f5f6fa;color:#637086}
+.student-dashboard-table th{white-space:nowrap;font-size:11px;font-weight:800;text-transform:uppercase;padding:15px 13px}
+.student-dashboard-table th:first-child{border-radius:10px 0 0 10px}
+.student-dashboard-table th:last-child{border-radius:0 10px 10px 0}
+.student-dashboard-table td{padding:17px 13px;border-bottom:1px solid #e6eaf0;color:#64738b;font-size:12px;vertical-align:middle;white-space:nowrap}
+.student-dashboard-table tbody tr:last-child td{border-bottom:0}
+.student-dashboard-table .student-event-name{color:#252a3a;white-space:normal;min-width:175px}
+.student-dashboard-table .student-event-name strong{display:block;font-size:12px}
+.student-dashboard-table .student-event-name small{display:block;color:#97a0af;font-size:10px;margin-top:3px}
+.student-dashboard-table .badge{font-size:11px;padding:5px 14px;text-align:center;min-width:80px}
+.student-attendance-note{margin:13px 0 0;color:#9098a7;font-size:11px}
+.student-dashboard-empty{border:1px dashed #e2e5eb;border-radius:10px;padding:26px;color:#7a8598;text-align:center}
+.student-dashboard-finance{display:flex;flex-direction:column}
+.student-finance-main{margin-top:52px}
+.student-finance-main>p:first-child{font-size:14px;color:#708099;margin:0 0 3px}
+.student-finance-main>strong{display:block;color:#22273b;font-size:41px;font-weight:800;line-height:1.2;letter-spacing:-.035em;margin:0 0 23px}
+.student-clearance-badge .badge{display:inline-block;padding:7px 25px;font-size:12px}
+.student-finance-count{color:#6f7b90;margin:12px 0 3px;font-size:13px}
+.student-finance-semester{color:#99a3b3;font-size:11px;margin:4px 0 0}
+.student-finance-actions{display:flex;flex-direction:column;gap:10px;margin-top:auto;padding-top:38px}
+.student-finance-actions .btn{width:100%;min-height:45px;font-size:12px;border-radius:10px}
+.student-finance-actions .btn-primary{background:#bc171c}
+@media(max-width:1300px){.student-dashboard-top,.student-dashboard-bottom{gap:17px}.student-dashboard-card{padding:21px}.student-qr-layout{gap:18px;grid-template-columns:minmax(170px,220px) minmax(0,1fr)}.student-qr-frame{height:225px}}
+@media(max-width:1120px){.student-dashboard-top,.student-dashboard-bottom{grid-template-columns:1fr}.student-dashboard-card{padding:24px}.student-qr-layout{grid-template-columns:minmax(205px,245px) minmax(0,1fr);gap:35px}.student-finance-main{margin-top:25px}}
+@media(max-width:600px){.student-dashboard-title{gap:15px;flex-direction:column}.student-dashboard-title h1{font-size:26px}.student-dashboard-main-action{width:100%;min-height:43px}.student-dashboard-top,.student-dashboard-bottom{gap:14px;margin-bottom:14px}.student-dashboard-card{padding:18px;border-radius:15px}.student-profile-overview{gap:13px;align-items:flex-start}.student-profile-overview h2{font-size:20px}.student-profile-overview p{font-size:12px}.student-profile-avatar{width:54px;height:54px;flex-basis:54px}.student-profile-details{padding:0;gap:14px}.student-profile-details dt,.student-profile-details dd{font-size:12px}.student-qr-layout{grid-template-columns:1fr;justify-items:center;gap:18px}.student-qr-description{width:100%;text-align:center}.student-qr-description .student-qr-note{margin-bottom:14px}.student-finance-main{margin-top:18px}.student-finance-main>strong{font-size:35px}.student-finance-actions{padding-top:23px}}
+@media print{.student-dashboard-title,.student-dashboard-bottom,.student-qr-description .student-qr-print,.student-qr-view-link{display:none!important}.student-dashboard-top{grid-template-columns:1fr 1fr!important;gap:16px}.student-dashboard-card{border:1px solid #ccc;padding:16px}.student-qr-layout{grid-template-columns:1fr;justify-items:center}.student-qr-frame{width:233px;height:233px}.student-profile-details{gap:9px}.student-dashboard-finance{display:none!important}}

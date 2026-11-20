@@ -1,0 +1,142 @@
+/* Restore the ORIGINAL RMMC ITE welcome board. Only modifies login layout/left panel.
+   Loaded after login-crimson.css to override earlier full-screen theme. */
+body.login-page {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  align-items: stretch !important;
+  justify-content: initial !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: 100vh !important;
+  background: #fff8f9 !important;
+}
+body.login-page .login-left {
+  display: flex !important;
+  flex-direction: column !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  isolation: isolate;
+  flex: unset !important;
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  min-height: 100vh !important;
+  margin: 0 !important;
+  padding: 40px clamp(28px, 4vw, 58px) !important;
+  overflow: hidden !important;
+  background:
+    radial-gradient(circle at 100% 8%, rgba(206, 56, 72, .22) 0%, transparent 39%),
+    linear-gradient(142deg, #390712 0%, #560b19 38%, #7b1124 72%, #9a1b32 100%) !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+/* Faint ITE watermark from original login, without changing the right-hand form. */
+body.login-page .login-left::before {
+  content: "";
+  display: block !important;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url('../images/ite-logo.png') center 58% / min(64vw, 500px) auto no-repeat;
+  opacity: .10;
+  filter: grayscale(1) brightness(3);
+}
+body.login-page .login-left::after {
+  content: "";
+  display: block !important;
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border: 65px solid rgba(255, 255, 255, .05);
+  border-radius: 50%;
+  right: -250px;
+  bottom: -220px;
+  z-index: -1;
+  pointer-events: none;
+}
+body.login-page .login-left .ite-login-logo-top {
+  display: block !important;
+  width: 69px !important;
+  height: 69px !important;
+  margin: 0 !important;
+  padding: 4px !important;
+  background: #fff !important;
+  border: 0 !important;
+  border-radius: 50%;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+}
+body.login-page .login-intro {
+  display: block !important;
+  margin: auto 0 !important;
+  position: relative;
+  z-index: 2;
+  max-width: 490px;
+}
+body.login-page .login-intro .eyebrow {
+  display: inline-block !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: .18em !important;
+  color: #fce6eb !important;
+}
+body.login-page .login-intro h1 {
+  display: block !important;
+  font-size: clamp(36px, 4vw, 58px) !important;
+  font-weight: 800 !important;
+  line-height: 1.12 !important;
+  letter-spacing: -.05em !important;
+  color: #fff !important;
+  margin: 20px 0 16px !important;
+}
+body.login-page .login-intro > p {
+  display: block !important;
+  color: #f6dce3 !important;
+  font-size: 15px !important;
+  line-height: 1.65 !important;
+  margin: 0 !important;
+}
+body.login-page .login-chips {
+  display: flex !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+  margin-top: 23px !important;
+}
+body.login-page .login-chips span {
+  display: inline-block !important;
+  border: 1px solid rgba(255,255,255,.38) !important;
+  border-radius: 22px !important;
+  padding: 6px 13px !important;
+  font-size: 12px !important;
+  color: #fff !important;
+}
+body.login-page .login-copy {
+  display: block !important;
+  color: rgba(255,255,255,.72) !important;
+  font-size: 11px !important;
+  position: relative;
+  z-index: 2;
+}
+body.login-page .login-right {
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  min-height: 100vh !important;
+  margin: 0 !important;
+}
+@media (max-width: 790px) {
+  body.login-page { grid-template-columns: minmax(0,1fr) !important; }
+  body.login-page .login-left {
+    min-height: 290px !important;
+    padding: 25px 26px !important;
+  }
+  body.login-page .login-intro { margin: 20px 0 25px !important; }
+  body.login-page .login-intro h1 { font-size: clamp(29px, 7vw, 39px) !important; margin: 10px 0 !important; }
+  body.login-page .login-intro > p { font-size: 12px !important; }
+  body.login-page .login-chips { margin-top: 14px !important; }
+  body.login-page .login-chips span { padding: 4px 9px !important; font-size: 11px !important; }
+  body.login-page .login-copy { display: none !important; }
+  body.login-page .login-right { min-height: auto !important; }
+}

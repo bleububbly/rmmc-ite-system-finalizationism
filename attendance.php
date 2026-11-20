@@ -1,0 +1,30 @@
+<?php
+require __DIR__ . '/app/services.php';$u=require_login();$staff=in_array($u['role'],['Admin','Officer'],true);
+if(request_post()){
+    check_post();if(!$staff)fail('Staff access required.',403);
+    $participant=(int)($_POST['participant_id']??0);$status=(string)($_POST['status']??'');
+    if(!in_array($status,['pending','present','late','partial','absent','excused'],true))fail('Invalid attendance status.');
+    $row=one('SELECT id,event_id,attendance_status FROM event_participants WHERE id=?',[$participant]);if(!$row)fail('Attendance record not found.',404);
+    try{db()->beginTransaction();
+        run_sql('UPDATE event_participants SET attendance_status=? WHERE id=?',[$status,$participant]);
+        run_sql('INSERT INTO attendance(event_participant_id,status) VALUES(?,?) ON DUPLICATE KEY UPDATE status=VALUES(status)',[$participant,$status]);
+        $aid=one('SELECT id FROM attendance WHERE event_participant_id=?',[$participant]);
+        run_sql("INSERT INTO attendance_logs(attendance_id,action,performed_by,previous_value,new_value,remarks) VALUES(?,'status_change',?,?,?,?)",[$aid['id'],$u['id'],$row['attendance_status'],$status,'Staff manual attendance correction']);
+        audit('attendance_status_changed','event_participants',$participant,['from'=>$row['attendance_status'],'to'=>$status]);db()->commit();flash('Attendance status updated.');
+    }catch(Throwable $e){if(db()->inTransaction())db()->rollBack();friendly_error($e,'Could not update attendance.');}
+    go('attendance.php?event_id='.$row['event_id']);
+}
+page_header('Attendance',$u);
+if(!$staff){
+    $student=mine();title_block('My Attendance','Track your participation in ITE events.');
+    $history=$student?attendance_for_student((int)$student['id']):[];
+    ?><section class="panel"><h2>My Events</h2><div class="table-scroll"><table class="table"><thead><tr><th>Event</th><th>Date</th><th>Time In</th><th>Time Out</th><th>Status</th></tr></thead><tbody><?php foreach($history as $a):?><tr><td><?=h($a['title'])?></td><td><?=h(substr($a['starts_at'],0,10))?></td><td><?=h($a['time_in']??'—')?></td><td><?=h($a['time_out']??'—')?></td><td><?=status_badge($a['attendance_status'])?></td></tr><?php endforeach;?></tbody></table></div><?php if(!$history):?><p class="empty">No attendance entries yet.</p><?php endif;?></section>
+    <?php
+}else{
+    $events=all('SELECT id,title,starts_at,status FROM events ORDER BY starts_at DESC LIMIT 80');$eventId=(int)($_GET['event_id']??($events[0]['id']??0));
+    $event=$eventId?one('SELECT * FROM events WHERE id=?',[$eventId]):null;
+    $participants=$event?all('SELECT ep.id,ep.attendance_status,s.id AS student_id,s.student_number,s.first_name,s.last_name,s.program,s.year_level, a.time_in,a.time_out, GROUP_CONCAT(CONCAT(sc.slot, ": ",DATE_FORMAT(sc.scanned_at,"%H:%i")) ORDER BY sc.scanned_at SEPARATOR "; ") scanned_slots FROM event_participants ep JOIN students s ON s.id=ep.student_id LEFT JOIN attendance a ON a.event_participant_id=ep.id LEFT JOIN attendance_scans sc ON sc.event_participant_id=ep.id WHERE ep.event_id=? GROUP BY ep.id,ep.attendance_status,s.id,s.student_number,s.first_name,s.last_name,s.program,s.year_level,a.time_in,a.time_out ORDER BY s.last_name,s.first_name LIMIT 300',[$eventId]):[];
+    title_block('Attendance Management','Review event participation, checkpoints and student statuses.','<a class="btn btn-primary" href="'.h(app_path('scan.php')).'">Open QR Scanner</a>');
+    ?><section class="panel"><form method="get" class="row" style="align-items:end"><label style="flex:1">Select Event<select name="event_id" onchange="this.form.submit()"><?php foreach($events as $e):?><option value="<?=h($e['id'])?>" <?=$eventId===(int)$e['id']?'selected':''?>><?=h($e['title'].' · '.substr($e['starts_at'],0,10).' · '.$e['status'])?></option><?php endforeach;?></select></label><button class="btn btn-ghost">Load</button></form><?php if($event): $slots=all('SELECT slot,opens_at,closes_at FROM event_attendance_slots WHERE event_id=? ORDER BY opens_at',[$eventId]);?><div class="divider"></div><h2><?=h($event['title'])?></h2><div class="row" style="margin-bottom:18px"><?=status_badge($event['status'])?><?php foreach($slots as $slot):?><span class="badge"><?=h(SLOTS[$slot['slot']]??$slot['slot'])?>: <?=h(substr($slot['opens_at'],11,5))?>–<?=h(substr($slot['closes_at'],11,5))?></span><?php endforeach;?></div><div class="table-scroll"><table class="table"><thead><tr><th>Student</th><th>Course / Year</th><th>Scanned Checkpoints</th><th>Time In</th><th>Time Out</th><th>Status</th><th>Manual Correction</th></tr></thead><tbody><?php foreach($participants as $p):?><tr><td><a href="<?=h(app_path('student.php?id='.$p['student_id']))?>"><?=h($p['student_number'].' · '.$p['last_name'].', '.$p['first_name'])?></a></td><td><?=h($p['program'].' · '.$p['year_level'])?></td><td><?=h($p['scanned_slots']??'—')?></td><td><?=h($p['time_in']??'—')?></td><td><?=h($p['time_out']??'—')?></td><td><?=status_badge($p['attendance_status'])?></td><td><form method="post" class="row"><?=csrf_field()?><input type="hidden" name="participant_id" value="<?=h($p['id'])?>"><select name="status" style="max-width:120px;margin:0"><?php foreach(['pending','present','late','partial','absent','excused'] as $v):?><option value="<?=$v?>" <?=$p['attendance_status']===$v?'selected':''?>><?=ucfirst($v)?></option><?php endforeach;?></select><button class="btn btn-soft btn-sm" data-confirm="Apply a manual attendance correction?">Update</button></form></td></tr><?php endforeach;?></tbody></table></div><?php if(!$participants):?><p class="empty">No participants. Publish the event first to enroll active students.</p><?php endif;?><p class="hint">Manual corrections are recorded in attendance logs. Each missing required checkpoint is fined ₱20 using Events → Finalize after the event ends. A full-event status correction does not cancel existing fines; review those separately.</p><?php else: ?><p class="empty">Create an event first to manage attendance.</p><?php endif;?></section><?php
+}
+page_footer();
